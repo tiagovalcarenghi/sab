@@ -11,6 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import * as yup from 'yup';
 import { Formik, Form } from "formik";
 import '../../assets/login/css/login.css';
+import {useNavigate} from 'react-router-dom';
 
 //Banner SAB:
 import BannerSab from '../../assets/login/images/banner-SAB.png'; // Import using relative path
@@ -26,11 +27,12 @@ const theme = createTheme({
 });
 
 
-const Login = props => {
+const Login = ()  => {
 
 
-    const { logar } = props;
+    const navigate = useNavigate();
 
+  
     const initialValues = {
         usuario: '',
         senha: ''
@@ -49,9 +51,9 @@ const Login = props => {
 
     const Logar = (values, actions) => {
         console.log("values", values);
-        logar(values);
+        //logar(values);
         actions.resetForm();
-        //history.push("/filmes/listagem");
+        navigate('/main-menu', {replace: true});
     };
 
     return (

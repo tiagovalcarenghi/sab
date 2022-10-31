@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './pages/login/Login';
+import { BrowserRouter } from 'react-router-dom';
+import Rotas from './routes/Rotas';
 
 
 const ambiente = process.env.NODE_ENV;
@@ -16,9 +16,7 @@ if (ambiente !== "production") {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Routes>     
-        <Route path='/' element={<Login />} />     
-    </Routes>
+    <Rotas />
   </BrowserRouter>
 );
 
