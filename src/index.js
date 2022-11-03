@@ -7,9 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Rotas from './routes/Rotas';
 
 
-import './assets/main-menu/main-menu.css';
-
-
 const ambiente = process.env.NODE_ENV;
 if (ambiente !== "production") {
   //criarServidor({ environment: ambiente });
